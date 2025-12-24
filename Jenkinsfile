@@ -25,21 +25,21 @@ pipeline {
             steps {
                 sh 'chmod +x mvnw'
                 sh './mvnw clean compile'
-                echo 'TODO: Add build commands here'
+                echo 'Build commands: chmod +x mvnw & ./mvnw clean compile'
             }
         }
 
         stage('Test') {
             steps {
                 sh './mvnw test'
-                echo 'TODO: Add test commands here'
+                echo 'Test commands: ./mvnw test'
             }
         }
 
         stage('Package') {
             steps {
-                sh '.mvnw package -DskipTests'
-                echo 'TODO: Add package commands here'
+                sh './mvnw package -DskipTests'
+                echo 'Package Commands: ./mvnw package -DskipTests'
             }
         }
     }
